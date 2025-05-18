@@ -1,9 +1,14 @@
-for(let i = 1; i<20; i++){
-    if(i == 13){
-        continue
-    } else{
-console.log("happy new year");
-    }
-
+function appendToDisplay(value) {
+    document.getElementById("display").value += value;
 
 }
+function clearToDisplay(){
+    document.getElementById("display").value="";
+}
+ function calculateResult() {
+        try {
+            document.getElementById("display").value = eval(document.getElementById("display").value);
+        } catch (error) {
+            document.getElementById("display").value = "Error";
+        }
+    }
